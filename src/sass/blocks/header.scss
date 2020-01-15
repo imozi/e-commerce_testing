@@ -1,34 +1,116 @@
 .header {
-  width: 100%;
-  min-height: 50px;
-  padding-top: 7px;
-  padding-bottom: 8px;
-  background-color: $black-lighten;
+  @include mobile {
+    width: 100%;
+    min-height: 50px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    background-color: $black-lighten;
 
-  & .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
+    & .container {
+      @include mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+      }
+
+      @include tablet {
+        padding: 0 $tablet-padding;
+      }
+
+      @include desktop {
+        justify-content: stretch;
+      }
+    }
+
+    @include tablet {
+      padding: 12px 0;
+    }
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      min-height: 90px;
+
+      & .container {
+        padding-left: 10px;
+        padding-right: 17px;
+      }
+    }
   }
 }
 
 .header__logo {
   display: block;
 
+  // @include desktop {
+  //   margin-right: 7.2%;
+  // }
+
   & svg {
     width: auto;
     height: 23.57px;
+
+    @include desktop {
+      width: 230px;
+      height: 32px;
+    }
   }
 
   & .title {
     @include mobile {
       display: none;
     }
+
+    @include tablet {
+      display: block;
+    }
   }
 }
 
 
 .header_contacts {
-  display: none;
+  @include mobile {
+    display: none;
+  }
+
+  @include tablet {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+
+    @include desktop {
+      margin: 0;
+    }
+
+    & .header__callback {
+      padding: 8px 15px;
+      background-color: transparent;
+      border: 1px solid $orange;
+      font-family: $third-font-family;
+      font-size: 16px;
+      line-height: 20px;
+      text-decoration: none;
+      color: $orange;
+      margin-right: 10px;
+
+      @include desktop {
+        padding: 13px 27px;
+        margin-right: 24px;
+      }
+    }
+
+    & .header__phone {
+      font-family: $third-font-family;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 23px;
+      text-decoration: none;
+      color: $white;
+
+      @include desktop {
+        margin-right: 10px;
+      }
+    }
+  }
 }

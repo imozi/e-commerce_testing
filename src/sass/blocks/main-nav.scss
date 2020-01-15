@@ -1,6 +1,29 @@
 .main-nav__list {
-  display: none;
   @include list-reset;
+
+  @include mobile {
+    display: none;
+  }
+
+  @include desktop {
+    display: flex;
+
+    & li {
+      margin-right: 30px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    & a {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: $white;
+      text-decoration: none;
+    }
+  }
 }
 
 .main-nav__btn {
@@ -17,4 +40,8 @@
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
   outline: none;
   cursor: pointer;
+
+  @include desktop {
+    display: none;
+  }
 }

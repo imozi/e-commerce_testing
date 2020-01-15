@@ -3,17 +3,16 @@
   margin: 0 auto;
 
   @include mobile {
-    max-width: $mobile-max-width;
     padding: 0 $mobile-padding;
   }
 
   @include tablet {
-    max-width: $tablet-max-width;
+    min-width: $tablet-min-width;
     padding: 0 $tablet-padding;
   }
 
   @include desktop {
-    max-width: $desktop-max-width;
+    width: $desktop-width;
     padding: 0 $desktop-padding;
   }
 }
