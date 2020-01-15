@@ -1,0 +1,13 @@
+.promo {
+  padding-top: 30px;
+  padding-bottom: 25px;
+  min-height: 526px;
+  background-color: $black-light;
+  background-image: url("../img/mobile/promo-bg-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/mobile/promo-bg-mobile@2x.png");
+  }
+}

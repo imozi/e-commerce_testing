@@ -1,0 +1,10 @@
+.feedback {
+  background-color: $black-light;
+  background-image: url("../img/mobile/feedback-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/mobile/feedback-mobile@2x.png");
+  }
+}

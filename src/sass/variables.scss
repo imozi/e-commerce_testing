@@ -1,1 +1,33 @@
-//
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$desktop-max-width: 1420px;
+$tablet-max-width: 1023px;
+$mobile-max-width: 767px;
+
+$desktop-padding: 20px;
+$tablet-padding: 30px;
+$mobile-padding: 20px;
+
+$reserve-font-family: "Arial", "Helvetica", sans-serif;
+$main-font-family: "Montserrat", $reserve-font-family;
+$secondary-font-family: "Roboto", $reserve-font-family;
+$third-font-family: "SourceSansPro", $reserve-font-family;
+
+$gray: #393939;
+$gray-dark: #2E2E2E;
+$gray-darken: #262626;
+$gray-darknes: #292929;
+$black-opacity-20: rgba(0, 0, 0, 0.2);
+$black-lighten: #202020;
+$black-light: #171718;
+$white: #ffffff;
+$white-opacity-10: rgba(255, 255, 255, 0.1);
+$orange: #ff834e;
+$orange-dark: #ef8b54;
+$orange-darknes: #de774b;
+$mustard: #de9b55;
+$purple: #50386f;
+$purple-gradient: linear-gradient(170.25deg, #8D5DCC -128.51%, #55329E 221.38%);
+$orange-gradient: linear-gradient(160.21deg, #DE9B55 -8.73%, #EE5432 93.23%);
+

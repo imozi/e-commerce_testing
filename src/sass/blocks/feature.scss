@@ -1,0 +1,10 @@
+.feature {
+  background-color: $black-light;
+  background-image: url("../img/mobile/features-bg-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/mobile/features-bg-mobile@2x.png");
+  }
+}

@@ -1,0 +1,8 @@
+.slider__item {
+  & img {
+    @include mobile {
+      width: 210px;
+      height: 210px;
+    }
+  }
+}

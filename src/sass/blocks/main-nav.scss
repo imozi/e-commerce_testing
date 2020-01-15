@@ -1,0 +1,20 @@
+.main-nav__list {
+  display: none;
+  @include list-reset;
+}
+
+.main-nav__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: $gray-darknes;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+  cursor: pointer;
+}

@@ -31,7 +31,7 @@ gulp.task('clean', () =>
 gulp.task('copy', () => gulp.src([
     'src/*.html',
     'src/favicon/**/*',
-    'src/font/**/*.{woff,woff2}',
+    'src/fonts/**/*.{woff,woff2}',
     'src/js/**/*.js',
     'src/img/**/*',
     'src/video/**/*',

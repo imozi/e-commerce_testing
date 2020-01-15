@@ -1,0 +1,26 @@
+<section class="feedback">
+  <h2>Оставьте заявку, чтобы узнать, как создать свой Интернет-магазин</h2>
+  <p>Интернет-магазин, который приносит прибыль</p>
+  <div class="feedback__promo">
+    <p>Получите бесплатно</p>
+    <ul>
+      <li>Личная косультация</li>
+      <li>Стратегия запуска и продвижения</li>
+      <li>Коммерческое предложение</li>
+    </ul>
+  </div>
+  <form class="feedback__form" method="POST" action="#">
+    <input type="text" id="name" name="name" placeholder="Имя" required>
+    <label for="name">Имя</label>
+    <input type="tel" id="telephone" name="telephone" placeholder="+7 (000) 000-00-00" required>
+    <label for="telephone">Телефон</label>
+    <textarea name="question" id="question" placeholder="Расскажите о своей задаче" aria-label="Расскажите о своей задаче"></textarea>
+    <label for="question">Расскажите о своей задаче</label>
+    <input type="checkbox" id="you-consent" name="consent" checked>
+    <label for="you-consent">Нажимая на кнопку "Отправить", я даю согласие на обработку персональных данных.</label>
+    <div class="feedback__form-captha">
+      <img src="img/captcha@1x.png" srcset="img/captcha@2x.png 2x" alt="Капча">
+    </div>
+    <button type="submit">Отправить</button>
+  </form>
+</section>
