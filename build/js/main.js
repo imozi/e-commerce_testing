@@ -1,0 +1,1 @@
+"use strict";!function(){var e=document.querySelector(".how-we-work__list");if(e){e.addEventListener("click",function(e){!function(e){e.preventDefault();var t=e.target;t.classList.contains("how-we-work__link")&&t.parentNode.parentNode.classList.add("how-we-work__item--active")}(e)})}}();

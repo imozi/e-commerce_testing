@@ -33,6 +33,12 @@
   }
 }
 
+@mixin min-width ($mix-width) {
+  @media (min-width: $mix-width) {
+    @content;
+  }
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
@@ -45,6 +51,15 @@
   &:hover,
   &:focus {
     color: $white-opacity-60;
+  }
+}
+
+@mixin hover-focus-link-orange {
+  transition: color $style-change-duration $style-change-function;
+
+  &:hover,
+  &:focus {
+    color: $orange-dark;
   }
 }
 

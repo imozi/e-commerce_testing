@@ -19,7 +19,7 @@
       }
 
       @include desktop {
-        justify-content: stretch;
+        justify-content: space-between;
       }
     }
 
@@ -50,6 +50,7 @@
     @include desktop {
       width: 230px;
       height: 32px;
+      margin-right: 10px;
     }
   }
 
@@ -70,13 +71,14 @@
     display: none;
   }
 
-  @include tablet {
+  @include min-width(1200px) {
     display: block;
     margin-left: auto;
     margin-right: 20px;
 
     @include desktop {
       margin: 0;
+      margin-right: 10px;
     }
 
     & .header__callback {
@@ -107,10 +109,6 @@
       color: $white;
 
       @include hover-focus-link;
-
-      @include desktop {
-        margin-right: 10px;
-      }
     }
   }
 }
