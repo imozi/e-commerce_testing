@@ -43,10 +43,6 @@
 .header__logo {
   display: block;
 
-  // @include desktop {
-  //   margin-right: 7.2%;
-  // }
-
   & svg {
     width: auto;
     height: 23.57px;
@@ -94,6 +90,8 @@
       color: $orange;
       margin-right: 10px;
 
+      @include hover-focus-button-first;
+
       @include desktop {
         padding: 13px 27px;
         margin-right: 24px;
@@ -107,6 +105,8 @@
       line-height: 23px;
       text-decoration: none;
       color: $white;
+
+      @include hover-focus-link;
 
       @include desktop {
         margin-right: 10px;

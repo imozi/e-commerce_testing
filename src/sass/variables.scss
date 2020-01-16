@@ -15,14 +15,21 @@ $main-font-family: "Montserrat", $reserve-font-family;
 $secondary-font-family: "Roboto", $reserve-font-family;
 $third-font-family: "SourceSansPro", $reserve-font-family;
 
+$style-change-duration: 0.2s;
+$style-change-function: ease-in-out;
+
 $gray: #393939;
 $gray-dark: #2e2e2e;
 $gray-darken: #262626;
 $gray-darknes: #292929;
+$black-opacity-10: rgba(0, 0, 0, 0.1);
 $black-opacity-20: rgba(0, 0, 0, 0.2);
 $black-lighten: #202020;
 $black-light: #171718;
+$black-lighter: #1d1d1d;
 $white: #ffffff;
+$white-dark: #f1f1f1;
+$white-opacity-60: rgba(255, 255, 255, 0.6);
 $white-opacity-10: rgba(255, 255, 255, 0.1);
 $orange: #ff834e;
 $orange-dark: #ef8b54;

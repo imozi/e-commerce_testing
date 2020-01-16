@@ -38,3 +38,40 @@
     @content;
   }
 }
+
+@mixin hover-focus-link {
+  transition: color $style-change-duration $style-change-function;
+
+  &:hover,
+  &:focus {
+    color: $white-opacity-60;
+  }
+}
+
+@mixin hover-focus-button-first {
+  transition: all $style-change-duration $style-change-function;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $orange;
+  }
+}
+
+@mixin hover-focus-button-second {
+  transition: background-color $style-change-duration $style-change-function;
+
+  &:hover,
+  &:focus {
+    background-color: $orange-darknes;
+  }
+}
+
+@mixin hover-focus-scale {
+  transition: transform $style-change-duration $style-change-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}

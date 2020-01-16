@@ -12,7 +12,7 @@
   }
 
   @include desktop {
-    width: $desktop-width;
+    max-width: $desktop-width;
     padding: 0 $desktop-padding;
   }
 }
