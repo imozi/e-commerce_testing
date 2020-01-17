@@ -161,14 +161,7 @@ gulp.task('serve:dev', () => {
 
 
 gulp.task('build', gulp.series(
-  'clean',
-  'copy',
   'html:include',
-  'css',
-  'js:include',
-  'js:minify',
-  'img:minify',
-  'img:svg-sprite'
 ));
 
 gulp.task('build:dev', gulp.series(
