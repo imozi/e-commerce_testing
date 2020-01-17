@@ -49,8 +49,9 @@
     background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/client-bg-desktop@1x.png"), $black-light;
 
     @include retina {
-      background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/client-bg-desktop@2x.png"), $black-light no-repeat no-repeat;
-      background-size: auto, cover;
+      background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/client-bg-desktop@2x.png") no-repeat, $black-light;
+      background-size: auto, 100% 100%;
+      background-position: 0 0, center center;
     }
   }
 }

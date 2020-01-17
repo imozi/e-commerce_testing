@@ -5,7 +5,7 @@
     background-color: $black-light;
     background-image: url("../img/mobile/feedback-mobile@1x.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 
     @include retina {
       background-image: url("../img/mobile/feedback-mobile@2x.png");
@@ -80,7 +80,7 @@
     flex-direction: column;
   }
 
-  @include min-width(1200px)  {
+  @include min-width(1200px) {
     max-width: 665px;
   }
 }
@@ -101,7 +101,7 @@
       line-height: 22px;
       color: $white;
 
-      @include min-width(1200px)  {
+      @include min-width(1200px) {
         font-size: 25px;
         line-height: 30px;
       }
@@ -120,7 +120,7 @@
     }
   }
 
-  @include min-width(1200px)  {
+  @include min-width(1200px) {
     padding: 50px 10px 50px 50px;
     order: 0;
     min-height: 222px;
@@ -137,7 +137,7 @@
     line-height: 16px;
     color: $white;
 
-    @include min-width(1200px)  {
+    @include min-width(1200px) {
       font-size: 16px;
       line-height: 20px;
     }
@@ -184,9 +184,9 @@
       padding: 13px 15px;
       border: none;
 
-      @include min-width(1200px)  {
-        background: #F6F6F6;
-        border: 0.5px solid #D0D0D0;
+      @include min-width(1200px) {
+        background: #f6f6f6;
+        border: 0.5px solid #d0d0d0;
       }
     }
 
@@ -198,9 +198,9 @@
       resize: none;
       border: none;
 
-      @include min-width(1200px)  {
-        background: #F6F6F6;
-        border: 0.5px solid #D0D0D0;
+      @include min-width(1200px) {
+        background: #f6f6f6;
+        border: 0.5px solid #d0d0d0;
       }
     }
 
@@ -229,7 +229,7 @@
         height: 22px;
         left: 0;
         top: 0;
-        border: 1px solid #D0D0D0;
+        border: 1px solid #d0d0d0;
         border-radius: 2px;
       }
     }
@@ -249,7 +249,7 @@
       font-size: 14px;
       line-height: 17px;
       color: $white;
-      background: linear-gradient(158.11deg, #DE9B55 -8.73%, #EE5432 93.23%);
+      background: linear-gradient(158.11deg, #de9b55 -8.73%, #ee5432 93.23%);
       border: 0;
       margin: 0;
       cursor: pointer;
@@ -258,7 +258,7 @@
     }
   }
 
-  @include min-width(1200px)  {
+  @include min-width(1200px) {
     width: 350px;
     height: 434px;
     padding: 30px;

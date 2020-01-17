@@ -5,8 +5,7 @@
     background-color: $black-light;
     background-image: url("../img/mobile/cases-bg-mobile@1x.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 -300px;
+    background-size: 100% 100%;
 
     @include retina {
       background-image: url("../img/mobile/cases-bg-mobile@2x.png");
@@ -81,16 +80,18 @@
     min-height: 1060px;
     padding-top: 112px;
     background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/cases-bg-desktop@1x.png"), $black-light;
+    background-size: auto, 100% 100%;
 
     @include retina {
       background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/cases-bg-desktop@2x.png"), $black-light;
-      background-size: auto, cover;
+      background-size: auto, 100% 100%;
     }
   }
 }
 
 .cases__item {
   @include mobile {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,14 +99,16 @@
     min-height: 250px;
     margin-bottom: 40px;
     padding: 17px 17px 15px;
-    left: 19px;
-    top: 176px;
     background: rgba(20, 20, 20, 0.6);
     border-radius: 4px;
 
     & img {
       border-radius: 3px;
       margin-bottom: 16px;
+    }
+
+    & button {
+      display: none;
     }
 
     & h2 {
@@ -138,6 +141,27 @@
         line-height: 21px;
       }
     }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 8px;
+      left: 0;
+      bottom: -20px;
+      background: #de9b55;
+      box-shadow: 0 2px 4px rgba(222, 155, 85, 0.4);
+      border-radius: 7px;
+      opacity: 0;
+      transition: opacity $style-change-duration $style-change-function;
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &:hover button,
+    &:focus button {
+      opacity: 1;
+    }
   }
 
   @include desktop {
@@ -157,6 +181,10 @@
     &:nth-child(3n) {
       margin-right: 0;
     }
+
+    &:nth-child(4n) {
+      margin-right: 80px;
+    }
   }
 
   @include min-width (1440px) {
@@ -171,6 +199,26 @@
     &:nth-child(4n) {
       margin-right: 0;
     }
+
+    & button {
+      position: absolute;
+      display: block;
+      width: 100px;
+      height: 120px;
+      padding: 0;
+      margin: 0;
+      top: 44%;
+      left: 50%;
+      background: url("../img/svg-sprite/click.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: none;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity $style-change-duration $style-change-function;
+      outline: none;
+      cursor: pointer;
+    }
   }
 }
 
@@ -183,7 +231,7 @@
     background: url("../img/svg-sprite/icon-love-big.svg"), $purple-gradient;
     background-repeat: no-repeat;
     background-position: right 0, 0 0;
-    box-shadow: 0px 5px 10px rgba(94, 56, 158, 0.35);
+    box-shadow: 0 5px 10px rgba(94, 56, 158, 0.35);
     border-radius: 3px;
 
     & p {

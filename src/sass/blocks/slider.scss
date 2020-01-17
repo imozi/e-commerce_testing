@@ -1,6 +1,4 @@
 .slider {
-  position: relative;
-  overflow-x: hidden;
   @include mobile {
     width: 280px;
     min-height: 319px;
@@ -21,6 +19,7 @@
     transition: transform $style-change-duration $style-change-function;
   }
 }
+
 .slider__item {
   @include mobile {
     flex: 0 0 100%;
@@ -63,8 +62,9 @@
     justify-content: space-between;
     width: 135px;
     left: 50%;
-    bottom: 0;
+    bottom: 10px;
     transform: translateX(-50%);
+    z-index: 9;
 
     @include desktop {
       width: 198px;

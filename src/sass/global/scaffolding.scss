@@ -26,6 +26,6 @@ img {
   @include visually-hidden;
 }
 
-.hidden {
-  display: none;
+.fixed {
+  overflow: hidden;
 }

@@ -6,3 +6,4 @@
 //= vendor/polifill.js
 //= vendor/picturefill.js
 //= vendor/svg4everybody.js
+//= vendor/swiper.js

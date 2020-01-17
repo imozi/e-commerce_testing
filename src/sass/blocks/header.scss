@@ -111,4 +111,8 @@
       @include hover-focus-link;
     }
   }
+
+  @include min-width (1440px) {
+    margin-right: 65px;
+  }
 }

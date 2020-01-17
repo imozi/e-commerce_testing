@@ -6,7 +6,7 @@
     background-color: $black-light;
     background-image: url("../img/mobile/promo-bg-mobile@1x.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 
     @include retina {
       background-image: url("../img/mobile/promo-bg-mobile@2x.png");
@@ -137,6 +137,7 @@
         line-height: 20px;
         text-align: left;
         opacity: 1;
+
         @include desktop {
           display: none;
         }

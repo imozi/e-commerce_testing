@@ -1,10 +1,11 @@
 .feature {
   @include mobile {
+    position: relative;
     padding-top: 74px;
     background-color: $black-light;
     background-image: url("../img/mobile/features-bg-mobile@1x.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: 0;
 
     @include retina {
@@ -20,7 +21,7 @@
 
     @include retina {
       background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/feature-bg-desktop@2x.png"), $black-light;
-      background-size: auto, cover;
+      background-size: auto, 100% 100%;
     }
   }
 }
@@ -92,6 +93,7 @@
         align-items: flex-start;
         padding-left: 33px;
         padding-right: 60px;
+        margin-bottom: 0;
 
         & img {
           margin-right: 83px;
@@ -122,9 +124,11 @@
 
     & li:nth-child(2) img {
       margin-bottom: 14px;
+
+      @include desktop {
+        margin-bottom: 0;
+      }
     }
-
-
   }
 
   @include desktop {
@@ -145,7 +149,7 @@
     display: none;
   }
 
- @include desktop {
+  @include desktop {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -164,7 +168,7 @@
       @include hover-focus-link-orange;
     }
 
-    & .feature__link--active {
+    & .feature__link-item--active {
       color: $orange-dark;
     }
   }

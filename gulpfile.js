@@ -104,6 +104,15 @@ gulp.task('img:minify', () => gulp.src('build/img/**/*.svg')
     .pipe(gulp.dest('build/img'))
 );
 
+gulp.task("optim-images", function () {
+  return gulp.src("src/img/**/*.{png,jpg}")
+    .pipe(imgMinify([
+      imgMinify.optipng({ optimizationLevel: 3 }),
+      imgMinify.jpegtran({ quality: 75, progressive: true }),
+    ]))
+    .pipe(gulp.dest("build/img"));
+});
+
 gulp.task('img:svg-sprite', () => gulp.src('src/img/svg-sprite/*.svg')
     .pipe(imgMinify([
       imgMinify.svgo({
