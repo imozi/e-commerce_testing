@@ -1,27 +1,26 @@
 .feature {
-  background-color: $black-light;
-  background-image: url("../img/mobile/features-bg-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @include retina {
-    background-image: url("../img/mobile/features-bg-mobile@2x.png");
-  }
-
   @include mobile {
     padding-top: 74px;
+    background-color: $black-light;
+    background-image: url("../img/mobile/features-bg-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0;
+
+    @include retina {
+      background-image: url("../img/mobile/features-bg-mobile@2x.png");
+    }
   }
 
   @include desktop {
-    min-height: 1060px;
-    padding-top: 173px;
+    min-height: 1050px;
+    padding-top: 156px;
 
-    background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/feature-bg-desktop@2x.png"), $black-light;
+    background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/feature-bg-desktop@1x.png"), $black-light;
 
     @include retina {
       background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/feature-bg-desktop@2x.png"), $black-light;
       background-size: auto, cover;
-      background-position: 0 0, 0 0;
     }
   }
 }
@@ -32,6 +31,7 @@
 
   @include mobile {
     & li {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -40,7 +40,7 @@
 
       & p:first-of-type {
         margin: 0;
-        margin-bottom: 23px;
+        margin-bottom: 20px;
         font-weight: 600;
         font-size: 16px;
         line-height: 25px;
@@ -99,9 +99,32 @@
       }
     }
 
+    & li::after {
+      position: absolute;
+      content: "";
+      width: 200px;
+      height: 1px;
+      bottom: 0;
+      background-color: $white-opacity-10;
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    & li:last-of-type {
+      margin-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
     & li:nth-child(2) img {
       margin-bottom: 14px;
     }
+
+
   }
 
   @include desktop {
@@ -122,13 +145,13 @@
     display: none;
   }
 
-  @include desktop {
+ @include desktop {
     position: absolute;
     display: flex;
     justify-content: space-between;
     min-width: 568px;
     left: 50%;
-    bottom: 97px;
+    bottom: 0;
     transform: translateX(-50%);
 
     & a {
@@ -144,6 +167,10 @@
     & .feature__link--active {
       color: $orange-dark;
     }
+  }
+
+  @include min-width(1200px) {
+    bottom: 97px;
   }
 }
 

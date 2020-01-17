@@ -420,70 +420,107 @@
       </div>
     </section>
     <section class="cases">
-      <h2><span>Кейсы говорят за себя</span>Наши кейсы</h2>
-      <article class="cases__item">
-        <img width="240" height="150" src="img/mobile/flowers-mobile@1x.jpg" srcset="img/mobile/flowers-mobile@2x.jpg 2x" alt="Королевство цветов">
-        <h2>Королевство цветов</h2>
-        <p>Интернет-магазин</p>
-      </article>
-      <article class="cases__item">
-        <img width="240" height="150" src="img/mobile/climate-mobile@1x.jpg" srcset="img/mobile/climate-mobile@2x.jpg 2x" alt="Мастер климат">
-        <h2>Мастер климат</h2>
-        <p>Интернет-магазин</p>
-      </article>
-      <article class="cases__item">
-        <img width="240" height="150" src="img/mobile/pharmacy-mobile@1x.jpg" srcset="img/mobile/pharmacy-mobile@2x.jpg 2x" alt="Новая аптека">
-        <h2>Новая аптека</h2>
-        <p>Интернет-магазин</p>
-      </article>
-      <article class="cases__item">
-        <img width="240" height="150" src="img/mobile/reserve-mobile@1x.jpg" srcset="img/mobile/reserve-mobile@2x.jpg 2x" alt="Восток Тех Резерв">
-        <h2>Восток Тех Резерв</h2>
-        <p>Интернет-магазин</p>
-      </article>
-      <div class="cases__request">
-        <p>Оставьте свою заявку, чтобы получить <b>БЕСПЛАТНУЮ</b> консултацию!</p>
-        <button type="button">Оставить заявку</button>
+      <div class="container">
+        <h2><span>Кейсы говорят за себя</span><span>Наши кейсы</span></h2>
+        <div class="cases__wrapper">
+          <article class="cases__item">
+              <picture>
+                <source srcset="img/desktop/flowers-desktop@1x.jpg, img/desktop/flowers-desktop@2x.jpg,2x"
+                  media="(min-width: 1024px)">
+                  <img src="img/mobile/flowers-mobile@1x.jpg"
+                  srcset="img/mobile/flowers-mobile@2x.jpg 2x" alt="Королевство цветов">
+              </picture>
+            <h2>Королевство цветов</h2>
+            <p>Интернет-магазин</p>
+          </article>
+          <article class="cases__item">
+            <picture>
+              <source srcset="img/desktop/climate-desktop@1x.jpg, img/desktop/climate-desktop@2x.jpg,2x"
+                media="(min-width: 1024px)">
+                <img src="img/mobile/climate-mobile@1x.jpg"
+                srcset="img/mobile/climate-mobile@2x.jpg 2x" alt="Мастер климат">
+            </picture>
+            <h2>Мастер климат</h2>
+            <p>Интернет-магазин</p>
+          </article>
+          <article class="cases__item">
+            <picture>
+              <source srcset="img/desktop/pharmacy-desktop@1x.jpg, img/desktop/pharmacy-desktop@2x.jpg,2x"
+                media="(min-width: 1024px)">
+                <img src="img/mobile/pharmacy-mobile@1x.jpg"
+                srcset="img/mobile/pharmacy-mobile@2x.jpg 2x" alt="Новая аптека">
+            </picture>
+            <h2>Новая аптека</h2>
+            <p>Интернет-магазин</p>
+          </article>
+          <article class="cases__item">
+            <picture>
+              <source srcset="img/desktop/reserve-desktop@1x.jpg, img/desktop/reserve-desktop@1x.jpg,2x"
+                media="(min-width: 1024px)">
+                <img src="img/mobile/reserve-mobile@1x.jpg"
+                srcset="img/mobile/reserve-mobile@2x.jpg 2x" alt="Восток Тех Резерв">
+            </picture>
+            <h2>Восток Тех Резерв</h2>
+            <p>Интернет-магазин</p>
+          </article>
+        </div>
+        <div class="cases__request">
+          <p>Оставьте свою заявку, чтобы получить <span>бесплатную</span> консултацию!</p>
+          <button type="button">Оставить заявку</button>
+        </div>
       </div>
     </section>
     <section class="clients">
-      <h2>Наши клиенты</h2>
-      <div class="clients__slider slider">
-      <a href="#" class="slider__item"><img src="img/client-01@1x.png" srcset="img/client-01@2x.png 2x" alt="Ревьера Парк"></a>
-      <a class="visually-hidden slider__item" href="#"><img src="img/client-02@1x.png" srcset="img/client-02@2x.png 2x" alt="Новая аптека"></a>
-      <a class="visually-hidden slider__item" href="#"><img src="img/client-03@1x.png" srcset="img/client-03@2x.png 2x" alt="Smart shop stereo"></a>
-      <a class="visually-hidden slider__item" href="#"><img src="img/client-04@1x.png" srcset="img/client-04@2x.png 2x" alt="Синьор Помидор"></a>
-      <div class="slider__btn">
-        <button type="button" aria-label="Назад">Назад</button>
-        <button type="button" aria-label="Вперед">Вперед</button>
+      <div class="container">
+        <h2>Наши клиенты</h2>
+        <div class="clients__slider slider">
+          <div class="clients__list slider__wrapper">
+            <a href="#" class="clients__item slider__item"><img src="img/client-01@1x.png" srcset="img/client-01@2x.png 2x"
+                alt="Ревьера Парк"><span>01</span></a>
+            <a href="#" class="clients__item slider__item" href="#"><span>02</span><img src="img/client-02@1x.png" srcset="img/client-02@2x.png 2x"
+                alt="Новая аптека"></a>
+            <a href="#" class="clients__item slider__item" href="#"><span>03</span><img src="img/client-03@1x.png" srcset="img/client-03@2x.png 2x"
+                alt="Smart shop stereo"></a>
+            <a href="#" class="clients__item slider__item" href="#"><span>04</span><img src="img/client-04@1x.png" srcset="img/client-04@2x.png 2x"
+                alt="Синьор Помидор"></a>
+          </div>
+          <div class="slider__btn">
+            <button type="button" aria-label="Назад"></button>
+            <button type="button" aria-label="Вперед"></button>
+          </div>
+        </div>
       </div>
-    </div>
     </section>
     <section class="feedback">
-      <h2>Оставьте заявку, чтобы узнать, как создать свой Интернет-магазин</h2>
-      <p>Интернет-магазин, который приносит прибыль</p>
-      <div class="feedback__promo">
-        <p>Получите бесплатно</p>
-        <ul>
-          <li>Личная косультация</li>
-          <li>Стратегия запуска и продвижения</li>
-          <li>Коммерческое предложение</li>
-        </ul>
-      </div>
-      <form class="feedback__form" method="POST" action="#">
-        <input type="text" id="name" name="name" placeholder="Имя" required>
-        <label for="name">Имя</label>
-        <input type="tel" id="telephone" name="telephone" placeholder="+7 (000) 000-00-00" required>
-        <label for="telephone">Телефон</label>
-        <textarea name="question" id="question" placeholder="Расскажите о своей задаче" aria-label="Расскажите о своей задаче"></textarea>
-        <label for="question">Расскажите о своей задаче</label>
-        <input type="checkbox" id="you-consent" name="consent" checked>
-        <label for="you-consent">Нажимая на кнопку "Отправить", я даю согласие на обработку персональных данных.</label>
-        <div class="feedback__form-captha">
-          <img src="img/captcha@1x.png" srcset="img/captcha@2x.png 2x" alt="Капча">
+      <div class="container feedback__wrapper">
+        <div class="feedback__inner">
+          <h2>Оставьте заявку, чтобы узнать, как создать свой Интернет-магазин</h2>
+          <p>Интернет-магазин, который приносит прибыль</p>
+          <div class="feedback__promo">
+            <p>Получите бесплатно</p>
+            <ul class="feedback__promo-list">
+              <li>Личная косультация</li>
+              <li>Стратегия запуска и продвижения</li>
+              <li>Коммерческое предложение</li>
+            </ul>
+          </div>
         </div>
-        <button type="submit">Отправить</button>
-      </form>
+        <form class="feedback__form" method="POST" action="#">
+          <input type="text" id="name" name="name" placeholder="Имя" required>
+          <label for="name">Имя</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="+7 (000) 000-00-00" required>
+          <label for="telephone">Телефон</label>
+          <textarea name="question" id="question" placeholder="Расскажите о своей задаче"
+            aria-label="Расскажите о своей задаче"></textarea>
+          <label for="question">Расскажите о своей задаче</label>
+          <input class="visually-hidden " type="checkbox" id="you-consent" name="consent" checked>
+          <label for="you-consent">Нажимая на кнопку "Отправить", я даю согласие на обработку персональных данных.</label>
+          <div class="feedback__form-captha">
+            <img src="img/captcha@1x.png" srcset="img/captcha@2x.png 2x" alt="Капча">
+          </div>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
     </section>
   </main>
 

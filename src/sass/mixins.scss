@@ -82,6 +82,25 @@
   }
 }
 
+@mixin hover-focus-button-third {
+  transition: all $style-change-duration $style-change-function;
+
+  &:hover,
+  &:focus {
+    color: $purple-light;
+    background-color: $white;
+  }
+}
+
+@mixin hover-focus-button-shadow {
+  transition: box-shadow $style-change-duration $style-change-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(222, 155, 85, 0.3);
+  }
+}
+
 @mixin hover-focus-scale {
   transition: transform $style-change-duration $style-change-function;
 

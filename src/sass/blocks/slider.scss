@@ -1,8 +1,118 @@
+.slider {
+  position: relative;
+  overflow-x: hidden;
+  @include mobile {
+    width: 280px;
+    min-height: 319px;
+  }
+
+  @include tablet {
+    width: 560px;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.slider__wrapper {
+  @include mobile {
+    display: flex;
+    transition: transform $style-change-duration $style-change-function;
+  }
+}
 .slider__item {
-  & img {
-    @include mobile {
-      width: 210px;
-      height: 210px;
+  @include mobile {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 30px;
+
+    & img {
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  @include tablet {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  @include desktop {
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-left: 10px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  @include min-width (1440px) {
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+.slider__btn {
+  @include mobile {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 135px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    @include desktop {
+      width: 198px;
+      bottom: 64px;
+    }
+
+    & button {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+      border: 3px solid $orange-dark;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+
+      @include desktop {
+        width: 74px;
+        height: 74px;
+      }
+
+      @include hover-focus-scale;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 12px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/svg-sprite/icon-arrow-left.svg");
+        background-repeat: no-repeat;
+
+        @include desktop {
+          width: 30px;
+          height: 30px;
+          transform: translate(-35%, -50%);
+        }
+      }
+
+      &:last-of-type {
+        &::after {
+          background-image: url("../img/svg-sprite/icon-arrow-right.svg");
+        }
+      }
     }
   }
 }

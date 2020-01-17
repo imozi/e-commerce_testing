@@ -1,3 +1,108 @@
 .clients {
-  background-color: $black-light;
+  @include mobile {
+    background-color: $black-light;
+    min-height: 563px;
+    padding-top: 94px;
+    padding-bottom: 20px;
+
+    & .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include desktop {
+        max-width: 1600px;
+      }
+    }
+
+    & h2 {
+      margin: 0;
+      margin-bottom: 36px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      text-transform: uppercase;
+      color: $white;
+
+      @include desktop {
+        font-size: 42px;
+        line-height: 51px;
+        margin-bottom: 102px;
+      }
+    }
+
+    & a span {
+      display: none;
+    }
+
+    @include desktop {
+      padding-top: 109px;
+    }
+  }
+
+  @include tablet {
+    min-height: 560px;
+  }
+
+  @include desktop {
+    min-height: 1060px;
+    background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/client-bg-desktop@1x.png"), $black-light;
+
+    @include retina {
+      background: url("../img/svg-sprite/geometry.svg"), url("../img/desktop/client-bg-desktop@2x.png"), $black-light no-repeat no-repeat;
+      background-size: auto, cover;
+    }
+  }
+}
+
+.clients__list {
+  @include desktop {
+    & .clients__item {
+      height: 220px;
+
+      & img {
+        @include hover-focus-scale;
+      }
+
+      &:hover span,
+      &:focus span {
+        color: $orange-dark;
+        text-shadow: 5px 5px 5px rgba(239, 139, 84, 0.15);
+      }
+
+      @include min-width (1440px) {
+        height: 330px;
+      }
+    }
+  }
+
+  @include desktop {
+    min-height: 550px;
+
+    & .clients__item {
+      position: relative;
+      text-decoration: none;
+      color: $white;
+      z-index: 8;
+    }
+
+    & .clients__item span {
+      position: absolute;
+      display: block;
+      top: -95px;
+      right: 0;
+      font-weight: 700;
+      font-size: 190px;
+      line-height: 232px;
+      color: $white-opacity-10;
+      transition: all $style-change-duration $style-change-function;
+      z-index: -1;
+    }
+  }
+}
+
+.clients__slider {
+  @include desktop {
+    padding-top: 95px;
+  }
 }
