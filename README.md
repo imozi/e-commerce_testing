@@ -1,5 +1,5 @@
-# e-commerce_testing
-Тестовое задание студии [Web-alternative]:https://web-alt.ru/
+# E-commerce_testing
+Тестовое задание студии [Web-alternative](https://web-alt.ru)
 
 ## Сборка проекта
 1. Установить необходимые зависимости командой `npm i` в консоли в папке проекта
@@ -9,5 +9,5 @@
 ## Запуск локального сервера
 `npm start`
 
-## Предварительный просмотр готовой верстки
-[Верстка]:https://imozi.github.io/e-commerce_testing/build/
+### Предварительный просмотр готовой верстки
+[Верстка](https://imozi.github.io/e-commerce_testing/build)
